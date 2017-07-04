@@ -1,0 +1,129 @@
+
+Q1.Explain regular expression and quantifiers with example code
+
+	
+	Ans. 	Regular Expression:
+		-------------------
+	The Java Regex or Regular Expression is an API to define pattern for searching or 
+
+	manipulating strings. It is widely used to define constraint on strings such as 
+
+	password and email validation. Java Regex API provides 1 interface and 3 classes in 
+
+	java.util.regex package. The Matcher and Pattern classes are widely used in 
+	
+	java regular expression.
+
+
+import java.util.regex.*;  
+class RegexExample2{  
+public static void main(String args[]){  
+System.out.println(Pattern.matches(".s", "as"));  
+System.out.println(Pattern.matches(".s", "mc"));  
+System.out.println(Pattern.matches(".s", "mst"));  
+System.out.println(Pattern.matches(".s", "avps"));  
+System.out.println(Pattern.matches("..s", "mas"));  
+}}  
+	
+	quantifiers:
+	-------------
+	The quantifiers specify the number of occurrences of a character.
+	
+
+import java.util.*;
+  
+class Test
+{
+    public static void main(String[] args)
+    {
+ 
+        Pattern p = Pattern.compile("g+");
+  
+         Matcher m = p.matcher("ggg");
+  
+        while (m.find())
+            System.out.println("Pattern found from " + m.start() +
+                               " to " + (m.end()-1));
+  
+    }
+}
+
+
+
+
+
+Q2.Explain DAO design pattern with example
+
+	
+	Ans.	This is a design pattern used to create classes and interfaces in such a way so that the client
+		can easily interact with the data of DataBase without knowing the internal structure used to
+		connect with the DataBase and fetch the data.
+
+
+
+
+
+
+
+Q3.Write a note on how DAO helps in abstraction
+
+
+	Ans.	The DataAccessObject is the primary object of this pattern. The DataAccessObject 
+		
+		abstracts the underlying data access implementation for the BusinessObject to
+		
+		enable transparent access to the data source. The BusinessObject also delegates 
+		
+		data load and store operations to the DataAccessObject.	
+
+
+
+Q4.Describe the different approaches of String processing.
+
+
+	Ans.	Character class:
+		----------------
+		In the context of regular expressions, a character class is a set of characters enclosed 
+		within square brackets. It specifies the characters that will successfully match a single 
+		character from a given input string.
+
+
+		Matcher class:
+		-------------
+		It implements MatchResult interface. It is a regex engine i.e. used to perform match
+		operations on a character sequence.
+	
+	
+		Pattern class:
+		-------------
+		It is the compiled version of a regular expression. It is used to define a pattern 
+		for the regex engine.	
+
+
+		Predefined Character class:
+		---------------------------
+		any lowercase letter, any uppercase letter, the underscore character, or any digit.
+		Use the predefined classes whenever possible. They make your code easier to read 
+		and eliminate errors introduced by malformed character classes.
+		
+		for Ex:- \d means a range of digits (0-9), and \w means a word character.
+
+
+		quantifiers:
+		-------------
+		Quantifiers allow you to specify the number of occurrences to match against. For 
+		convenience, the three sections of the Pattern API specification describing greedy, reluctant,
+		At first glance it may appear that the quantifiers X?, X?? and X?+ do exactly the same thing, 
+		since they all promise to match "X, once or not at all". There are subtle implementation differences 
+		
+
+		Greedy Quantifires:
+		-------------------
+		The greedy quantifier .* to find "anything", zero or more times,followed by the letters "f" "o" "o". 
+		Because the quantifier is greedy, the .* portion of the expression first eats the entire input string.
+		At this point, the overall expression cannot succeed, because the last three letters ("f" "o" "o") have 
+		already been consumed. So the matcher slowly backs off one letter at a time until the rightmost occurrence 
+		of "foo" has been regurgitated, at which point the match succeeds and the search ends.
+
+
+		
