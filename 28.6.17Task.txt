@@ -1,0 +1,126 @@
+Q1.Write a note on covariant return type with example code.
+
+Ans.	The covariant return type in java, allows narrowing down return type of the 
+	overridden method. This feature will help to avoid down casting on the client 
+	side. It allows programmer to program without the need of type checking and down 
+	casting. The covariant return type always works only for non-primitive return types.
+
+class A{  
+A get(){return this;}  
+}  
+  
+class B1 extends A{  
+B1 get(){return this;}  
+void message(){System.out.println("welcome to covariant return type");}  
+  
+public static void main(String args[]){  
+new B1().get().message();  
+}  
+}  
+
+
+
+
+
+Q2.Write a note on Enum with example code.
+
+Ans.	Enum in java is a data type that contains fixed set of constants.
+	It can be used for days of the week (SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, 
+	FRIDAY and SATURDAY) , directions (NORTH, SOUTH, EAST and WEST) etc. The java enum
+	constants are static and final implicitly. It is available from JDK 1.5.
+	
+	Java Enums can be thought of as classes that have fixed set of constants.
+
+Points to remember for Java Enum:-
+
+1.enum improves type safety
+2.enum can be easily used in switch
+3.enum can be traversed
+4.enum can have fields, constructors and methods
+5.enum may implement many interfaces but cannot extend any class because it internally 
+  extends Enum class
+
+class EnumExample1
+{  
+public enum Season { WINTER, SPRING, SUMMER, FALL }  
+  
+public static void main(String[] args) 
+{  
+for (Season s : Season.values())  
+System.out.println(s);  
+  
+}
+}  
+
+
+
+Q3.Write a note on use of super keyword and super() method.
+
+Ans.	The super keyword in java is a reference variable which is used to refer immediate 
+	parent class object. Whenever you create the instance of subclass, an instance of 
+	parent class is created implicitly which is referred by super reference variable.
+	Usage of java super Keyword
+
+USAGE OF JAVA SUPER KEYWORD:- 	
+
+1.	super can be used to refer immediate parent class instance variable.
+
+2.	super can be used to invoke immediate parent class method.
+	
+3.	super() can be used to invoke immediate parent class constructor.
+
+	
+1) super is used to refer immediate parent class instance variable.
+
+	We can use super keyword to access the data member or field of parent class. 
+	It is used if parent class and child class have same fields.
+
+2) super can be used to invoke parent class method
+
+	The super keyword can also be used to invoke parent class method.
+ 	It should be used if subclass contains the same method as parent class. 
+	In other words, it is used if method is overridden.
+
+3) super is used to invoke parent class constructor.
+
+The super keyword can also be used to invoke the parent class constructor.
+
+
+
+
+Q4.Write a code to implement abstraction using interface.
+
+Ans.	
+
+interface A
+{  
+void a();  
+void b();  
+void c();  
+void d();  
+}  
+  
+abstract class B implements A
+{  
+public void c(){System.out.println("I am C");
+}  
+}  
+  
+class M extends B
+{  
+public void a(){System.out.println("I am a");}  
+public void b(){System.out.println("I am b");}  
+public void d(){System.out.println("I am d");}  
+}  
+  
+class Test5
+{  
+public static void main(String args[])
+{  
+A a=new M();  
+a.a();  
+a.b();  
+a.c();  
+a.d();  
+}
+}  

@@ -1,0 +1,120 @@
+Q1.What is the difference between System.out ,System.err and System.in?
+
+	
+
+	Ans. 	System.in:
+		---------
+	
+	This is used to feed the data to user's program and usually a keyboard is used as standard input 
+	stream and represented as System.in.
+
+		System.out:
+		-----------
+	
+	This is used to output the data produced by the user's program and usually a computer screen is used 
+	for standard output stream and represented as System.out.
+	
+
+		System.err:
+		-----------
+	
+	This is used to output the error data produced by the user's program and usually a computer screen is 
+	used for standard error stream and represented as System.err.
+	
+
+
+Q2.What is the purpose of the System class?
+
+	
+	Ans.	The purpose is that it provide access to externally defined properties and environment variables.
+		It is used to read the system properties. By using this class we can read time, and date, current
+		running process,current Runtime.
+
+	
+
+Q3.Which is the abstract parent class of FileWriter ?
+
+
+	Ans. 	OutputStreamWriter
+
+
+
+Q4.Which class is used to read streams of characters from a file?
+
+
+	Ans. 	This class inherits from the InputStreamReader class. FileReader is used for reading streams 
+		of characters. This class has several constructors to create required objects. 
+
+
+
+Q5.Which class is used to read streams of raw bytes from a file?
+
+
+	Ans.	FileInputStream:-This stream reads raw bytes from a file. The read methods in this class 
+				 return a byte of data read from a file.	
+
+
+
+Q6.What are the differences between FileInputStream/FileOutputStream and RandomAccessFile? 
+
+	
+	Ans.	FileInputStream:
+		----------------
+		
+		The FileInputStream is used for reading data from the files. Objects can be created using the 
+		keyword new and there are several types of constructors available.
+
+
+		FileOutputStream:
+		-----------------
+
+		The FileOutputStream is used to create a file and write data into it. The stream would create 
+		a file, if it doesn't already exist, before opening it for output.		
+
+
+		RandomAccessFile:
+		-----------------
+
+		The RandomAccessFile class in the Java IO API allows you to move around a file and read from it 
+		or write to it as you please. You can replace existing parts of a file too. This is not possible 
+		with the FileInputStream or FileOutputStream.
+
+Q7.Write a note on Channels and Buffer with example?
+
+
+	Ans.	Channels:
+		---------
+		
+		A nexus for I/O operations. A channel represents an open connection to an entity such as a hardware 
+		
+		device, a file, a network socket, or a program component that is capable of performing one or more 
+		
+		distinct I/O operations, for example reading or writing.
+
+		A channel is either open or closed. A channel is open upon creation, and once closed it remains closed. 
+		
+		Once a channel is closed, any attempt to invoke an I/O operation upon it will cause a ClosedChannelException
+
+		to be thrown. Whether or not a channel is open may be tested by invoking its isOpen method.
+
+		Channels are, in general, intended to be safe for multithreaded access as described in the specifications of 
+
+		the interfaces and classes that extend and implement this interface. Since: 1.4
+
+		Buffer:
+		-------
+	
+		A buffer is a linear, finite sequence of elements of a specific primitive type. Aside from its content,
+		the essential properties of a buffer are its capacity, limit, and position:
+
+		A buffer's capacity is the number of elements it contains. The capacity of a buffer is never negative 
+		and never changes.
+
+		A buffer's limit is the index of the first element that should not be read or written. A buffer's limit
+		is never negative and is never greater than its capacity.
+
+		There is one subclass of this class for each non-boolean primitive type.
+
+		
+
+		A buffer's position is the index of the next element to be read or written. A buffer's position is never negative and is never greater than its limit.

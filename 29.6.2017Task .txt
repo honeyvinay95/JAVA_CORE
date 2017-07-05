@@ -1,0 +1,118 @@
+Q1) Can abstract class have constructors in Java?
+
+Ans. 	Yes it can have a constructor and it is defined and behaves just like any
+ 	other class's constructor. Except that abstract classes can't be directly 
+	instantiated,only extended, so the use is therefore always from a subclass's 
+	constructor.
+
+Q2)  Can abstract class implements interface in Java? do they require to implement all methods?
+
+Ans. 	In Java, an abstract class can implement an interface, and not provide implementations 
+	of all of the interface's methods. It is the responsibility of the first concrete class 
+	that has that abstract class as an ancestor to implement all of the methods in the interface.
+
+
+Q3)  Can abstract class be final in Java?
+
+Ans. 	No a class cannot be marked "abstract" as well as "final". Marking a class "abstract"
+	means it contains partial implementation of methods and hence depends on its
+	subclasses to provide concrete implementation. Marking the class "final" means that no 
+	other class can extend it and hence abstract classes cannot be marked final.
+
+
+
+Q4)  Can abstract class have static methods in Java?
+
+Ans.	In Java you can have a static method in an abstract class:
+
+	This is allowed because that method can be called directly, even if you do not 
+	have an instance of the abstract class: 
+	
+	However, for the same reason, you can't declare a static method to be abstract. 
+	Normally, the compiler can guarantee that an abstract method will have a real 
+	implementation any time that it is called, because you can't create an instance 
+	of an abstract class. But since a static method can be called directly,
+ 	making it abstract would make it possible to call an undefined method.
+
+
+Q5)  Can you create instance of abstract class?
+
+Ans. 	No, you cannot create an instance of an abstract class because it does not have
+	a complete implementation. The purpose of an abstract class is to function as a 
+	base for subclasses. It acts like a template, or an empty or partially empty 
+	structure, you should extend it and build on it before you can use it
+
+Q6)  Is it necessary for abstract class to have abstract method?
+
+Ans. 	Yes we can have an abstract class without Abstract Methods as both are independent
+	concepts. Declaring a class abstract means that it can not be instantiated on its 
+	own and can only be sub classed. Declaring a method abstract means that Method will 
+	be defined in the subclass.
+
+
+Q7)  Difference between abstract class and interface in Java?
+
+Ans.	1.Main difference is methods of a Java interface are implicitly abstract and 
+	  cannot have implementations.
+ 	
+	2.A Java abstract class can have instance methods that implements a default behavior.
+ 	
+	3.Variables declared in a Java interface is by default final. An abstract class may 
+	  contain non-final variables
+
+Q8)  When do you favor abstract class over interface?
+
+Ans.	Use the abstract class if your subclasses have is-a relationship with the abstract 
+	class.You can have both an abstract class and an interface - the abstract class 
+	specifying implementations, and the interface specifying the API.
+
+Q9)    What is abstract method in Java?
+
+Ans.	Abstract methods means there is no default implementation for it and an 
+	implementing class will provide the details.
+
+Q10) Can abstract class contains main method in Java ?
+
+Ans.	Abstract just means you can't instantiate the class directly. You can have 
+	constructors if you want - they might be needed for subclasses to initiate 
+	the object state. You can have static methods, including main() and they 
+	don't need an object so calling them is fine.
+	
+Q11)  what is static block in java?
+
+Abs.	Static block is mostly used for changing the default values of static variables.
+	This block gets executed when the class is loaded in the memory. A class can have 
+	multiple Static blocks, which will execute in the same sequence in which they have 
+	been written into the program.
+
+Q12)  What is the need of static block?
+
+Ans.	Static block is mostly used for changing the default values of static variables.
+	This block gets executed when the class is loaded in the memory. A class can have 
+	multiple Static blocks, which will execute in the same sequence in which they have 
+	been written into the program.
+
+Q13)  Can we overload static methods in java?
+
+Ans.	No,Static methods can't be overriden as it is part of a class rather than an object. 
+	But one can overload static method. No, you cannot override a static method.The static
+	resolves against the class, not the instance.
+
+Q14)  Can we call super class static methods from sub class?
+
+Ans.	If you want to call static method of a class we can call directly from another static
+	method or by using its class name we can call static method of that class.
+
+Q15)What is the difference between final and static keywords?
+
+
+Ans.	Final:
+	
+	In the case of final variables, they should either be assigned at declaration or in 
+	the constructor. In the case of final classes, it means that they cannot be subclassed.
+ 	
+	Static: 
+
+	So if a class has a static variable, no matter how many instances of it you create, 
+	they all would have the same value for the variable.
+	

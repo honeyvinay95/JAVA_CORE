@@ -1,0 +1,108 @@
+Q1.Write a short note on Deque and give example code.
+
+Ans. 	Java Deque Interface is a linear collection that supports element insertion and 
+	removal at both ends. Deque is an acronym for "double ended queue".
+
+   import java.util.*;  
+   public class ArrayDequeExample 
+{  
+   public static void main(String[] args)
+ {  
+    Deque<String> deque = new ArrayDeque<String>();  
+  
+   deque.add("Ravi");    
+   deque.add("Vijay");     
+   deque.add("Ajay");    
+     
+   for (String str : deque)
+ {  
+   System.out.println(str);  
+   }  
+   }  
+}  
+
+
+Q2.Write a short note on Generics an all types of Parameters used in Generics with example code.
+
+Ans.	The Java Generics programming is introduced in J2SE 5 to deal with type-safe objects.
+	
+	Before generics, we can store any type of objects in collection i.e. non-generic. 
+	Now generics, forces the java programmer to store specific type of objects.
+
+Advantage of Java Generics:-
+
+There are mainly 3 advantages of generics. They are as follows:
+
+1)	Type-safety : We can hold only a single type of objects in generics. It doesn’t allow to store other objects.
+
+2)	Type casting is not required: There is no need to typecast the object.
+
+3)	It is checked at compile time so problem will not occur at runtime. The good programming
+	strategy says it is far better to handle the problem at compile time than runtime.
+
+
+import java.util.*;  
+class TestGenerics1
+{  
+public static void main(String args[])
+{  
+ArrayList<String> list=new ArrayList<String>();  
+list.add("rahul");  
+list.add("jai");  
+  
+String s=list.get(1);
+System.out.println("element is: "+s);  
+  
+Iterator<String> itr=list.iterator();  
+while(itr.hasNext())
+{  
+System.out.println(itr.next());  
+}  
+}  
+}  
+
+
+Q3.Write a short note on Map Interface.
+
+Ans.	A map contains values on the basis of key i.e. key and value pair. Each key and 
+	value pair is known as an entry. Map contains only unique keys.
+
+	Map is useful if you have to search, update or delete elements on the basis of key.
+
+
+Q4.Write the difference between LinkedList and ArrayList.
+
+Ans.	ArrayList									
+
+1) ArrayList internally uses dynamic array to store the elements.	
+
+2) Manipulation with ArrayList is slow because it internally uses array. If any element is
+   removed from the array, all the bits are shifted in memory. 
+
+3) ArrayList class can act as a list only because it implements List only.	
+
+4) ArrayList is better for storing and accessing data.	
+
+	LinkedList
+
+1) LinkedList internally uses doubly linked list to store the elements.
+
+2) Manipulation with LinkedList is faster than ArrayList because it uses doubly linked list 
+   so no bit shifting is required in memory.
+
+3) LinkedList class can act as a list and queue both because it implements List and Deque 
+   interfaces.
+
+4) LinkedList is better for manipulating data.
+
+
+Q5.Write a note on Dynamic array in java.
+
+Ans. 	Normally, array is a collection of similar type of elements that have contiguous 
+	memory location.
+
+	Java array is an object the contains elements of similar data type. It is a data 
+	structure where we store similar elements. We can store only fixed set of elements 
+	in a java array.
+
+	Array in java is index based, first element of the array is stored at 0 index.

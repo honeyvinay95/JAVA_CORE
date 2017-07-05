@@ -1,0 +1,113 @@
+Q1.Write the difference between checked and unchecked exception with example code
+
+Ans.	Checked:-The classes that extend Throwable class except RuntimeException and Error 
+		 are known as checked exceptions.
+		
+		 e.g.IOException, SQLException etc. Checked exceptions are checked at compile-time. 
+
+	Unchecked:-The classes that extend RuntimeException are known as unchecked exceptions.
+		  
+		  e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc.
+		  Unchecked exceptions are not checked at compile-time rather they are checked at runtime. 
+ 	
+import java.util.*
+class Exdemo
+{
+public static void main(String []args)
+{
+try
+{
+int data=50/0;
+
+System.out.println(data);
+}
+catch(ArithmeticException e)
+{
+System.out.println(e);
+}
+finally
+{
+System.out.println("Program is finally closed");
+}
+System.out.println("Rest of the code");
+}
+
+}
+	
+Q2.Write the difference between throw and throws with example code
+
+Ans.	throw:-	
+	
+	it throws an instance of a Eception class.
+	it is used inside the method.
+	By using throw keyword we can throw cutomize execption as well.
+	This keyword is used to throw Predefined Exception classes and create Customized 
+	Exception classes and throw them as well.	
+
+	throws:-
+	
+	If we want to throw an exception and dont care of the handling of the exception,
+	then we use this keyword. It throws an Exception class to the calling method.
+	
+public class DelhiException extends Exception
+{
+public DelhiException(String msg)
+{
+System.out.println("Your customized Exception Message : ");
+}
+public void myMessage()
+{
+System 
+
+
+
+
+Q3.	Write a note on nested try…catch block with example code
+
+Ans.	Sometimes a situation may arise where a part of a block may cause one error and the 
+	entire block itself may cause another error. In such cases, exception handlers have 
+	to be nested.
+
+class ExcepTryCatcBblock
+{  
+ public static void main(String args[])
+{  
+  try{  
+    try{  
+     System.out.println("going to divide");  
+     int b =59/0;  
+    }
+	catch(ArithmeticException e){System.out.println(e);
+}  
+    try
+{  
+    int a[]=new int[5];  
+    a[5]=4;  
+    }
+	catch(ArrayIndexOutOfBoundsException e){System.out.println(e);
+}  
+     
+    System.out.println("other statement");  
+  }
+catch(Exception e){System.out.println("handeled");
+}  
+  
+  System.out.println("normal flow..");  
+ }  
+}  
+
+
+
+Q4.	Write a note on MultiThreading and MultiTasking
+
+Ans.	Multithreading in java is a process of executing multiple threads simultaneously.
+
+	Thread is basically a lightweight sub-process, a smallest unit of processing. Multiprocessing
+	and multithreading, both are used to achieve multitasking.
+	
+
+	Multitasking is a process of executing multiple tasks simultaneously. We use 
+	multitasking to utilize the CPU. Multitasking can be achieved by two ways:
+
+	Process-based Multitasking(Multiprocessing)
+	Thread-based Multitasking(Multithreading)
