@@ -1,0 +1,79 @@
+
+Q1.Write a note on PreparedStatement and ResultSetMetaData interfaces with code snippets.
+
+
+	Ans. 	
+	
+	The PreparedStatement interface is a subinterface of Statement. It is used to execute parameterized query.
+	Let's see the example of parameterized query:
+	String sql="insert into emp values(?,?,?)";  
+	As you can see, we are passing parameter (?) for the values. 
+	Its value will be set by calling the setter methods of PreparedStatement.
+	ResultSetMetaData Interface
+
+	The metadata means data about data i.e. we can get further information from the data.
+
+	If you have to get metadata of a table like total number of column, column name, column type etc.
+ 	ResultSetMetaData interface is useful because it provides methods to get metadata from the ResultSet object.
+
+Q2.Write a note on DDL, DML, DQL, DDL with code snippets.
+
+	Ans.
+
+	DDL:
+	---
+	
+	Data Definition Language (DDL) statements are used to define the database structure or schema. Some examples:
+	CREATE - to create objects in the database
+	ALTER - alters the structure of the database
+	DROP - delete objects from the database
+	TRUNCATE - remove all records from a table, including all spaces allocated for the records are removed
+	COMMENT - add comments to the data dictionary
+	RENAME - rename an object
+	
+
+	DML
+	---
+	Data Manipulation Language (DML) statements are used for managing data within schema objects. Some examples:
+	SELECT - retrieve data from the a database
+	INSERT - insert data into a table
+	UPDATE - updates existing data within a table
+	DELETE - deletes all records from a table, the space for the records remain
+	MERGE - UPSERT operation (insert or update)
+	CALL - call a PL/SQL or Java subprogram
+	EXPLAIN PLAN - explain access path to data
+	LOCK TABLE - control concurrency
+	
+	
+	DCL:
+	---
+
+	Data Control Language (DCL) statements. Some examples:
+	GRANT - gives user's access privileges to database
+	REVOKE - withdraw access privileges given with the GRANT command
+
+
+Q3.Write a note on HTML and Javascript.
+
+
+	Ans. 	HTML is the standard markup language for creating Web pages. HTML stands for Hyper Text Markup Language. HTML describes the structure of Web pages using markup. HTML elements are the building blocks of HTML pages.
+ 		HTML elements are represented by tags.
+		JavaScript often abbreviated as JS, is a high-level, dynamic, weakly typed, object-based, multi-paradigm, and interpreted programming language.
+ 		Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production.
+
+
+Q4.Write a code to fetch the data from H2 and put it in any collection object and display it?
+
+
+	Ans.	
+
+	create table tbl_FormCollectionUse  
+	(  
+	ID int identity primary key,  
+	Name varchar(50),  
+	Mobile bigint,  
+	EmailID varchar(100),  
+	Address varchar(100)  
+	)
+
+
