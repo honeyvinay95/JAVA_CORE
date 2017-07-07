@@ -1,0 +1,103 @@
+1.	Create a HTML page with table and color highlighted Header of the table columns.
+Ans.    
+<!DOCTYPE html>
+<head><head>
+<body>
+<table border=1>
+<tr bgcolor="yellow">
+<th>Heading1</th>
+<th>Heading2</th>
+<th>Heading3</th>
+</tr>
+
+<tr>
+<td>detail1</td>
+<td>Detail2</td>
+<td>Detail3</td>
+</tr>
+<td>detail1</td>
+<td>Detail2</td>
+<td>Detail3</td>
+</tr>
+</table>
+</body>
+<html>
+____________________________________________________________________________________________________________
+2.	Create a HTML page with a Registration form of a college.
+Ans.
+<html>
+<head><h3>Registration Form</h3></head>
+<body>
+<form>
+<table>
+<tr>
+<td>First Name</td>
+<td><INPUT type="text"></td>
+</tr>
+<tr>
+<td>Last Name</td>
+<td><INPUT type="text"></td>
+</tr>
+<tr>
+<td>Male<INPUT type="radio"></td>
+<td>Female<INPUT type="radio"></td>
+</tr>
+<tr>
+<td>Contact Number</td>
+<td><INPUT type="tel"></td>
+</tr>
+<tr>
+<td>Date Of Birth</td>
+<td><INPUT type="date"></td>
+</tr>
+<tr><td>Qualification</td></tr>
+<td><INPUT type="checkbox">10th</td>
+<td><INPUT type="checkbox">12th</td>
+<tr><td><input type="button" value="Submit"></td>
+<td><input type="button" value="Reset"></td></tr>
+</table>
+</form>
+</body>
+</html>
+____________________________________________________________________________________________________________
+3.	Create a HTML page with internal stylesheet for applying style to all <p> elements of the page.
+Ans.
+<html>
+<head><head>
+<style>
+p {
+    color: red;
+    text-align: center;
+}
+</style>
+<body>
+<p>Hello Java</p>
+<p>Hello Python</p>
+</body>
+</html>
+_______________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
