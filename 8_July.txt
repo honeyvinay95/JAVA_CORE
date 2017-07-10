@@ -1,0 +1,112 @@
+Q.1 Create a JSP page which will take student details and give message box on successful submission on the data. Use JSP and JSTL.
+<%@ page language="java" contentType="text/html"%>
+<html>
+<head>
+<title>Student Details</title>
+<script>
+function myFunction()
+{
+	alert("Data Has Been Submitted")
+	}
+</script>
+</head>
+<body>
+<form>
+<table cellspacing="3" align="center">
+<tr bgcolor="lime">
+<td colspan='2'><center>Enter Details</center></td>
+</tr>
+<tr>
+<td>Name</td><td><input type="text" name="name"/></td>
+</tr>
+<tr>
+<td>Age</td><td><input type="date" name="age"/></td>
+</tr>
+<tr>
+<tr>
+<td>Gender</td>
+<td>Male<INPUT type="radio" name="gen">
+Female<INPUT type="radio" name="gen"></td>
+</tr>
+<tr>
+<td>Address</td><td><input type="text" name="add"/></td>
+</tr>
+<tr>
+<td>MobaiNo</td><td><input type="text" name="mobno"/></td>
+</tr>
+<tr>
+<td>Qualification</td><td><input type="text" name="Qual"/></td>
+</tr>
+<tr>
+<td colspan="2"><center><input type="submit" value="Submit" onclick="myFunction()"/></center></td>
+</tr>
+</table>
+</form> 
+</body>
+</html>
+_______________________________________________________________________________________________________
+Q.2 Create a JSP page which will take the user age as input and display the age-category on submission of data. For eg: age between 1-12 will show child and age between 13-19 will show teenage…etc. Use JSP and JSTL for this.
+
+index.jsp
+=========
+<html>
+<head>
+
+<title>Student Details</title>
+
+</head>
+<body>
+<form action="page1.jsp">
+Enter Age Here : <input type="text" name="age"> </br>
+<input type="submit" Value="Enter">
+
+</form>
+</body>
+</html>
+____________________________
+
+
+page1.jsp
+==========
+<%@ page language="java" contentType="text/html;"%>
+<html>
+<head>
+
+</head>
+<body>
+<% String a = request.getParameter("age");
+int age = Integer.parseInt(a);
+if(age>0 && age<=12)
+{
+	out.println("You are a child");
+}
+else if(age >= 13 && age<=18 )
+{
+	out.println("You are a teenager");
+}
+ 
+else
+{
+	out.println("You are Adult");
+}
+
+%>
+</body>
+</html>
+__________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

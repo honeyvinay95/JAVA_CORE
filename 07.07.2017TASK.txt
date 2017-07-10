@@ -1,0 +1,101 @@
+Q.1	Create a html page with table of student details of any institute.
+Apply different CSS on it.
+Ans.
+<html>
+<head><title>Table</title>
+<link rel="stylesheet" type="text/css" href="Stylesheet1.css">
+</head>
+<style>
+.a{
+background-color:yellow;
+}
+</style>
+<body>
+<table width="30%" height="30px" border="1">
+<tr bgcolor="sky-blue">
+<td>Name</td>
+<td>Qualification</td>
+<td>Address</td>
+<td>MobailNo</td>
+</tr>
+<tr class="a">
+<td>ABC</td>
+<td>BA</td>
+<td>Delhi</td>
+<td>123123</td>
+</tr>
+<tr class="b">
+<td>DEF</td>
+<td>B.COM</td>
+<td>Mumbai</td>
+<td>456456</td>
+</tr>
+<tr>
+<td>GHI</td>
+<td>BCA</td>
+<td>Chennai</td>
+<td>789789</td>
+</tr>
+</body>
+</html>
+------------------
+Stylesheet1.css file
+.b{	background-color:lime;}
+__________________________________________________________________________________________
+Q.2	Create a form in html with some form action that will display messages on button click.
+Ans.
+<html>
+<head>
+<script>
+function myFunction()
+{
+alert("Data is Submited");
+}
+</script>
+</head>
+<body>
+<form>
+<table>
+<tr>
+<td>First Name</td>
+<td><INPUT type="text"></td>
+</tr>
+<tr>
+<td>Last Name</td>
+<td><INPUT type="text"></td>
+</tr>
+<tr>
+<td>Male<INPUT type="radio"></td>
+<td>Female<INPUT type="radio"></td>
+</tr>
+<tr>
+<td>Contact Number</td>
+<td><INPUT type="tel"></td>
+</tr>
+<tr>
+<td>Date Of Birth</td>
+<td><INPUT type="date"></td>
+</tr>
+<tr><td><input type="button" value="Submit"  onclick="myFunction()"></td></tr>
+</table>
+</form>
+</body>
+</html>
+__________________________________________________________________________________________
+Q.3	Write a note on Javascript and java server pages.
+Ans.
+Javascript - it is a scripting language,interpreted programming language that is used in or 
+write in html and Scripts are provided and executed as a plain text. They don’t need a special 
+preparation or a compilation to run.JavaScript can execute not only in the browser, but also 
+on the server,
+JSP(java server pages) -Java Server Pages (JSP) is a technology which is used to develop web 
+pages by inserting java code into the HTML pages by making special JSP tags.We write 
+JAVAbeans into it.
+__________________________________________________________________________________________
+
+
+
+
+
+
+
